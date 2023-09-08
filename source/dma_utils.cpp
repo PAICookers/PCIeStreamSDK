@@ -92,8 +92,6 @@ int read_dma(char *buffer,uint64_t size)
     return rc;
 }
 
-
-
 int wait_irq0(void)
 {
     int val;

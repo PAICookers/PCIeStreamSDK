@@ -23,11 +23,11 @@
 #define BYPASS_MAP_SIZE  (256*1024UL)
 #define CONTROL_MAP_SIZE (256*1024UL)
 
-#define GPIO0_DAT 0x00000
-#define GPIO1_DAT 0x00000
-#define GPIO2_DAT 0x20000
+#define BP_LED_BASE     0x10000
+#define CT_LED0_BASE    0x00000
+#define CT_LED1_BASE    0x10000
 
-#define BP3_REGFILE     0x30000
+#define REGFILE_BASE    0x00000
 #define RX_STATE        0x00
 #define TX_STATE        0x04
 #define CPU2FIFO_CNT    0x08
@@ -43,6 +43,7 @@
 #define SEND_LEN        0x30
 #define CTRL_REG        0x34
 #define oFrmNum_REG     0x38
+#define DP_RSTN         0x3C
 
 #define CONTROL_DEV  0
 #define TRANSMIT_DEV 1

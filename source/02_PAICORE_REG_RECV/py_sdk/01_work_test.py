@@ -1,5 +1,5 @@
 from example import pcie_init,read_bypass,write_bypass
-from example import send_dma_np, read_bypass64
+from example import send_dma_np
 import time
 from serial_utils import serialConfig
 import numpy as np

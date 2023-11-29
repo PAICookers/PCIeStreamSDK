@@ -94,7 +94,18 @@ int main()
     write_bypass(REGFILE_BASE + RX_STATE,0);
 
     show_reg_status();
-    
+
+    int err = 0;
+    for(int i = 0 ; i < write_size ; i++){
+        if(read_buffer[i] != buffer[i])
+        {
+            err = 1;
+            
+        }     
+    }
+    if(!err) printf("DMA LOOP TEST PASS  !\n");
+    else     printf("DMA LOOP TEST ERROR !\n");
+
     pcie_deinit();
     return 0;
 

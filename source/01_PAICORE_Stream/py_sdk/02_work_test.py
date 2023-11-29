@@ -111,7 +111,6 @@ if __name__ == "__main__":
     outputFrames = RecvFrame(oFrmNum)
 
     t2 = time.time()
-    print(round((t2-t1)*1000,2),'ms')
     # show_reg_status()
 
     outputFrames_ref = np.fromfile(outputrPath, dtype='<u8')
@@ -121,3 +120,6 @@ if __name__ == "__main__":
     outputFrames = np.delete(outputFrames,np.where(outputFrames == 18446744073709551615))
     print(outputFrames.shape)
 
+    val = read_bypass(REGFILE_BASE + TLAST_CNT)
+    print("CORE INFERENCE TIME : %d us" % val)
+    print('RECV FRMAE TIME     :',round((t2-t1)*1000*1000),'us')

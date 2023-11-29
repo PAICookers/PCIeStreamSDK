@@ -93,7 +93,7 @@ if __name__ == "__main__":
     write_bypass(REGFILE_BASE + DP_RSTN, 0)
     write_bypass(REGFILE_BASE + DP_RSTN, 1)
 
-    oFrmNum = 100
+    oFrmNum = 15
     write_bypass(REGFILE_BASE + oFrmNum_REG, oFrmNum)
 
     serialConfig()

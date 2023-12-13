@@ -28,22 +28,26 @@
 #define CT_LED1_BASE    0x10000
 
 #define REGFILE_BASE    0x00000
-#define RX_STATE        0x00
-#define TX_STATE        0x04
-#define CPU2FIFO_CNT    0x08
-#define FIFO2SNN_CNT    0x0C
-#define SNN2FIFO_CNT    0x10
-#define FIFO2CPU_CNT    0x14
-#define WDATA_1         0x18
-#define WDATA_2         0x1C
-#define RDATA_1         0x20
-#define RDATA_2         0x24
-#define DATA_CNT        0x28
-#define TLAST_CNT       0x2C
-#define SEND_LEN        0x30
-#define CTRL_REG        0x34
-#define oFrmNum_REG     0x38
-#define DP_RSTN         0x3C
+#define RX_STATE        0  * 4
+#define TX_STATE        1  * 4
+#define CPU2FIFO_CNT    2  * 4
+#define FIFO2SNN_CNT    3  * 4
+#define SNN2FIFO_CNT    4  * 4
+#define FIFO2CPU_CNT    5  * 4
+#define WDATA_1         6  * 4
+#define WDATA_2         7  * 4
+#define RDATA_1         8  * 4
+#define RDATA_2         9  * 4
+#define DATA_CNT        10 * 4
+#define TLAST_CNT       11 * 4
+
+#define SEND_LEN        20 * 4
+#define CTRL_REG        21 * 4
+#define oFrmNum_REG     22 * 4
+#define DP_RSTN         23 * 4
+#define SINGLE_CHANNEL  24 * 4
+#define CHANNEL_MASK    25 * 4
+#define OEN             26 * 4
 
 #define CONTROL_DEV  0
 #define TRANSMIT_DEV 1

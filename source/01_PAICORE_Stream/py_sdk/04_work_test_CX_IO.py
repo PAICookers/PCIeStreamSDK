@@ -54,9 +54,9 @@ if __name__ == "__main__":
     workFrames   = np.fromfile(workPath, dtype='<u8')
 
     # make sure config and init use one channel
-    write_bypass(REGFILE_BASE + OEN, 0b1110)
+    write_bypass(REGFILE_BASE + OEN, 0b0110)
 
-    write_bypass(REGFILE_BASE + CHANNEL_MASK, 0b1000)
+    write_bypass(REGFILE_BASE + CHANNEL_MASK, 0b0100)
     write_bypass(REGFILE_BASE + SINGLE_CHANNEL, 1)
     
     SendFrame(configFrames) # config
